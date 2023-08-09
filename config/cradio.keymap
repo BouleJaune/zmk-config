@@ -76,7 +76,7 @@
         //│  W       │  X       │  C       │  V       │  B       │   │  K       │  M       │ . !      │ : /      │    ; $   │
             &kp W      &kp X      &kp C      &kp V      &kp B          &kp K      &kp SEMI  &rev_comm  &kp DOT    &semi_dllr
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp SPACE     &lt 3 BSPC    &lt 1 ENTER
+                                            &lt 2 TAB   &kp SPACE     &lt 4 BSPC    &lt 1 ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -106,11 +106,11 @@
         //│          │  é       │          │          │          │   │          │  è       │  ù       │  ç       │  à       │
             &trans     &kp N2     &trans      &trans     &trans        &trans     &kp N7     &kp SQT    &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │    (     │          │    )     │          │   │  ESC       │LEFT      │ DOWN     │ UP       │ RIGHT    │
+        //│  !       │    (     │          │    )     │          │   │  ESC     │LEFT      │ DOWN     │ UP       │ RIGHT    │
             &kp EXCL   &kp N5     &trans    &kp MINUS   &trans       &kp ESC    &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │          │          │          │          │   │          │    `     │    \     │    '     │    "     │
+            &trans     &trans     &trans     &trans     &trans         &trans   &kp RA(N7)  &kp RA(N8)   &kp N4    &kp N3
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -137,14 +137,14 @@
         sym_layer{
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │    &     │     *    │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &kp N1     &kp BSLH     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│          │    &     │     *    │          │     ^    │   │          │          │          │          │  RESET   │
+           &trans       &kp N1    &kp BSLH    &trans    &kp LBKT       &trans     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│   $      │    {     │    %     │     }    │    +     │   │          │          │          │          │BOOTLOADER
+           &kp RBKT  &kp RA(N4) &kp LS(SQT) &kp RA(EQUAL) &kp PLUS     &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //│   ~      │    !     │    @     │    #     │     |    │   │          │          │          │          │          │
+         &kp RA(N2)    &kp SLASH   &kp RA(N0) &kp RA(N3) &kp RA(N6)    &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │     _    │
                                              &trans     &kp N8         &trans     &trans
